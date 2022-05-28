@@ -19,6 +19,7 @@ class CampaignShow extends Component {
       requestsCount: summary[2],
       approversCount: summary[3],
       manager: summary[4],
+      campaignName: summary[5]
     };
   }
 
@@ -29,8 +30,15 @@ class CampaignShow extends Component {
       requestsCount,
       approversCount,
       manager,
+      campaignName
     } = this.props;
     const items = [
+      {
+        header: campaignName,
+        meta: "Campaign Name",
+        // description: "Name of the campaign",
+        style: { overflowWrap: "break-word" },
+      },
       {
         header: manager,
         meta: "Address of Manager",
